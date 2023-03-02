@@ -1,33 +1,241 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Exceptions: Life chances breakdown
-      </h1>
+    <h1 class="govuk-heading-l">
+      Exceptions: Life chances breakdown
+    </h1>
 
-      <form class="form" action="confirmation" method="post">
+    <form class="form" action="confirmation" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Page introduction-->
+      <div class="govuk-form-group">
+        <p class="govuk-body">The Commission accredits and champions government employment initiatives through a specific Exception in its Recruitment Principles - Exception 2: Support for government employment programmes. In these questions, we are
+          asking about these.</p>
+        <p class="govuk-body">You can find more information about these schemes here: <a href="https://civilservicecommission.independent.gov.uk/recruitment/exceptions/"
+            class="govuk-link">https://civilservicecommission.independent.gov.uk/recruitment/exceptions/</a>.</p>
+      </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+<!--Checkboxes-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              You stated you use one (or more) of the Commission's Life Chances schemes. Please select which one/s you use from the following list:
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                AO Social Mobility Apprenticeship Programme (sponsored by DWP)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Going Forward into Employment - Ex-offenders (sponsored by Cabinet Office/DWP/MoJ)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Going Forward into Employment - Ex-military personnel (sponsored by Cabinet Office)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Going Forward into Employment - Spouses of Veterans (sponsored by Cabinet Office)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Care Leavers Programme (sponsored by DfE)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Apprentice and Work Trial Opportunities for Young Adults from Barnardo's (sponsored by PHE)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                WorkFit (sponsored by Defra)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Movement to Work (sponsored by HMRC)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Support for Care Leavers (sponsored by the Welsh Government)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                School Apprenticeship Programme (sponsored by Companies House)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Work Experience to Work Ready (sponsored by Companies House)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Modern Apprentice Programme (sponsored by Scottish Courts and Tribunals Service)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Autism Spectrum Employment (sponsored by HMRC)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Individuals with Down’s Syndrome (Workforce) (sponsored by PHE)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Supported Internships (Young People with complex Educational Needs) (sponsored by DfE)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Going Forward into Employment (Prison Leavers - Probation) (sponsored by Cabinet Office)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                HMRC Springboard (sponsored by HMRC)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                DWP Kickstart
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Neuro Diversity (sponsored by ONS)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Homelessness (sponsored by DWP)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Care Leavers (sponsored by GFiE)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Traineeships (sponsored by DfE )
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Kick Start (National) (sponsored by CSHR)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Fair Start Scotland (sponsored by The Scottish Government)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                CPS Apprenticeships
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Social Mobility Apprenticeship Programme (sponsored by BEIS)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Autistic Hiring Programme (Ministry of Defence)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Other (please specify)
+              </label>
+            </div>
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+<!--Question - Text Area-->
+      <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="more-detail">
+            Please provide contact details of the scheme lead/s (i.e. name and email address)
+          </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
 
-      </form>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </div>
+    </form>
+
   </div>
-
+</div>
 {% endblock %}

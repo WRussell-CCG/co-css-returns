@@ -1,33 +1,136 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
-      <h1 class="govuk-heading-l">
-        Exceptions
-      </h1>
+    <h1 class="govuk-heading-l">
+      Exceptions
+    </h1>
 
-      <form class="form" action="exceptions-breakdown" method="post">
+    <form class="form" action="exceptions-breakdown" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Page intro-->
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          This question asks for a grade breakdown of the number of individuals recruited externally using an Exception to the Civil Service Commission recruitment principles.
+          <br /><br />
+          The total of this question must be the same as the headline Exceptions figure in question 9
+          <br /><br />
+          Exceptions should only be reported when the candidate has a start date.
+        </label>
+      </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+      <div class="govuk-inset-text">
+        In question 9, you reported <strong>XX</strong> people were recruited.
+        <br /><br />
+        Please provide a breakdown of these <strong>XX</strong> people here.
+        <br /><br />
+        The total of this question should equal <strong>XX</strong>.
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+<!--Question Exceptions-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Total number of individuals appointed using an Exception in the Recruitment Principles between 01 July 2022 to 30 September 2022.
+        </label>
 
-      </form>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at SCS 2 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
 
-    </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at SCS 1 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at Grade 6 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at Grade 7 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at SEO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at HEO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at EO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at AO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Exceptions at AA (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="event-name">
+            Total
+          </label>
+          <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+        </div>
+
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

@@ -1,33 +1,133 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Details
-      </h1>
+    <h1 class="govuk-heading-l">
+      Details
+    </h1>
 
-      <form class="form" action="recruitment-campaigns" method="post">
+    <form class="form" action="recruitment-campaigns" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Organisation details-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="sort">
+          Organisation
+        </label>
+        <select class="govuk-select govuk-!-width-one-half" id="sort" name="sort">
+          <option value="published">Recently published</option>
+          <option value="updated" selected>Recently updated</option>
+          <option value="views">Most views</option>
+          <option value="comments">Most comments</option>
+        </select>
+      </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+<!--HR Director details-->
+      <div class="govuk-form-group">
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              HR Director details?
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            HR Director (or equivalent) name
+          </div>
+          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <div class="govuk-form-group">
+          <div id="event-name-hint" class="govuk-hint">
+            HR Director (or equivalent) email address
+          </div>
+          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
 
-      </form>
+        <div class="govuk-form-group">
+          <div id="event-name-hint" class="govuk-hint">
+            HR Director (or equivalent) phone
+          </div>
+          <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
+      </div>
 
-    </div>
+<!--Key contacts-->
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="event-name">
+            Key contacts for recruitment
+          </label>
+          <div class="govuk-inset-text">
+            These contacts will be used to send out correspondence. They will also be sent the quarterly data return. Please double check for spelling mistakes.
+            <br /><br />
+            If you have any additional people, please let us know.
+          </div>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s" for="event-name">
+                First contact
+              </label>
+            </h1>
+            <div id="event-name-hint" class="govuk-hint">
+              Name
+            </div>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <div id="event-name-hint" class="govuk-hint">
+              Email
+            </div>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <div id="event-name-hint" class="govuk-hint">
+              Phone
+            </div>
+            <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s" for="event-name">
+                Second contact
+              </label>
+            </h1>
+            <div id="event-name-hint" class="govuk-hint">
+              Name
+            </div>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <div id="event-name-hint" class="govuk-hint">
+              Email
+            </div>
+            <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+
+          <div class="govuk-form-group">
+            <div id="event-name-hint" class="govuk-hint">
+              Number
+            </div>
+            <input class="govuk-input govuk-!-width-one-half" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+          </div>
+      </div>
+<!--Navigation-->
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
   </div>
+</div>
 
 {% endblock %}

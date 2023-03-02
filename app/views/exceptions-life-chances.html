@@ -1,33 +1,74 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Exceptions: Life chances
-      </h1>
+    <h1 class="govuk-heading-l">
+      Exceptions: Life chances
+    </h1>
 
-      <form class="form" action="exceptions-life-chances-breakdown" method="post">
+    <form class="form" action="exceptions-life-chances-breakdown" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Page introduction-->
+      <div class="govuk-form-group">
+        <p class="govuk-body">The Commission accredits and champions government employment initiatives through a specific Exception in its Recruitment Principles - Exception 2: Support for government employment programmes. In these questions, we are
+          asking about these.</p>
+        <p class="govuk-body">Only appointments using one of the schemes on the following website should be included in this figure:</p>
+        <p class="govuk-body">You can find more information about these schemes here: <a href="https://civilservicecommission.independent.gov.uk/recruitment/exceptions/"
+            class="govuk-link">https://civilservicecommission.independent.gov.uk/recruitment/exceptions/</a>.</p>
+      </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+<!--Question-->
+      <div class="govuk-form-group">
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you use any of the Commission's accredited Exception 2 'Life Chances' schemes?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-      </form>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </div>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

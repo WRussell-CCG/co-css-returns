@@ -1,33 +1,199 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Recruitment function
-      </h1>
+    <h1 class="govuk-heading-l">
+      Recruitment function
+    </h1>
 
-      <form class="form" action="exceptions-life-chances" method="post">
+    <form class="form" action="exceptions-life-chances" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you retain recruitment documentation for two years after the completion of a campaign (whether successful or unsuccessful)?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+<!--Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you consistently capture diversity statistics following each campaign?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Always
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Never
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Sometimes
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+<!--Question-->
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="more-detail">
+            Please provide details of what analysis is undertaken on this data
+          </label>
+        </h1>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+      </div>
 
-      </form>
+<!--Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you have a diversity strategy in place?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-    </div>
+<!--Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is diversity considered during the planning stages of each recruitment campaign?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Always
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Never
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Sometimes
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+<!--Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              What is the source of your diversity data for fair and open recruits for this return?
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Recruitment platform/Applicant Tracking System (such as WCN or Oleeo)
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                HR Management System (such as SOP or iTrent)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Waste from mines or quarries
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Other (please specify):
+              </label>
+
+            </div>
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="text">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
   </div>
+</div>
 
 {% endblock %}

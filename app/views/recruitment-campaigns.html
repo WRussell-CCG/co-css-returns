@@ -1,33 +1,240 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Recruitment campaigns
-      </h1>
+    <h1 class="govuk-heading-l">
+      Recruitment campaigns
+    </h1>
 
-      <form class="form" action="recruitment-activity" method="post">
+<!--Total campaigns-->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-3">
+        Total number of fair and open recruitment campaigns that were completed in the quarter
+      </label>
+      <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+    </div>
 
-        <p>[Insert question content here]</p>
+<!--Posts advertised breakdown-->
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Posts advertised
+      </label>
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at SCS 2 (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at SCS 1 (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
 
-      </form>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at Grade 6 (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at Grade 7 (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at SEO (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at HEO (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at EO (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at AO (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="width-2">
+          Total posts at AA (or equivalent) and above
+        </label>
+        <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Total
+        </label>
+        <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+      </div>
+
+  </div>
+
+<!--Applicants received breakdown-->
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Applications received
+        </label>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at SCS 2 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at SCS 1 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at Grade 6 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at Grade 7 (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at SEO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at HEO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at EO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at AO (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="width-2">
+            Total posts at AA (or equivalent) and above
+          </label>
+          <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="event-name">
+            Total
+          </label>
+          <input class="govuk-input govuk-input--width-3" id="width-3" name="width-3" type="text">
+        </div>
 
     </div>
-  </div>
+
+<!--Radio questions-->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Have you run a campaign during this quarter which recruited more than 20 people in a single campaign?
+          </h1>
+        </legend>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Have you run a campaign during this quarter which recruited staff into more than one operating location?
+          </h1>
+        </legend>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+<!--Navigation-->
+<form class="form" action="recruitment-activity" method="post">
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+</div>
+</div>
 
 {% endblock %}

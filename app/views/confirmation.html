@@ -1,33 +1,94 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--pink">
+      Prototype
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is not a full service. It is not production code and you might experience problems.
+    </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Confirmation
-      </h1>
+    <h1 class="govuk-heading-l">
+      Confirmation
+    </h1>
 
-      <form class="form" action="check-answers" method="post">
+    <form class="form" action="check-answers" method="post">
 
-        <p>[Insert question content here]</p>
+<!--Question - Declaration-->
+      <div class="govuk-form-group">
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h1 class="govuk-fieldset__heading">
+              I confirm that, to the best of my knowledge, all information provided in this return is complete and accurate. I confirm that all internal consistency checks have been undertaken on data breakdowns and that no material omissions have
+              been made.
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+<!--Question - Contact details-->
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          Contact details
+        </legend>
+        <p>
+          These will be used to send a confirmation email of your return submission
+        </p>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Name
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            Contact email address
+          </label>
+          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text" autocomplete="address-line2">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            Contact phone number
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+        </div>
+      </fieldset>
 
-      </form>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </div>
+    </form>
+
   </div>
+</div>
 
 {% endblock %}
