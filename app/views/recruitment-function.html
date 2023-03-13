@@ -39,13 +39,13 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <input class="govuk-radios__input" id="function_retain_yes" name="function_retain_yes" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <input class="govuk-radios__input" id="function_retain_no" name="function_retain_no" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 No
               </label>
@@ -64,19 +64,19 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <input class="govuk-radios__input" id="function_diversityCollected_always" name="function_diversityCollected_always" type="radio" value="always">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                 Always
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <input class="govuk-radios__input" id="function_diversityCollected_never" name="function_diversityCollected_never" type="radio" value="never">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
                 Never
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <input class="govuk-radios__input" id="function_diversityCollected_sometimes" name="function_diversityCollected_sometimes" type="radio" value="sometimes">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
                 Sometimes
               </label>
@@ -92,7 +92,7 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
             Please provide details of what analysis is undertaken on this data
           </label>
         </h1>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        <textarea class="govuk-textarea" id="function_analysis_explanation" name="function_analysis_explanation" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
 
 <!--Question-->
@@ -105,13 +105,13 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <input class="govuk-radios__input" id="function_diversityStrategy_yes" name="function_diversityStrategy_yes" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="changed-name">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <input class="govuk-radios__input" id="function_diversityStrategy_no" name="function_diversityStrategy_no" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
                 No
               </label>
@@ -130,19 +130,19 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <input class="govuk-radios__input" id="function_diversityPlanning_always" name="function_diversityPlanning_always" type="radio" value="always">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live">
                 Always
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <input class="govuk-radios__input" id="function_diversityPlanning_never" name="function_diversityPlanning_never" type="radio" value="never">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
                 Never
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <input class="govuk-radios__input" id="function_diversityPlanning_sometimes" name="function_diversityPlanning_sometimes" type="radio" value="sometimes">
               <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
                 Sometimes
               </label>
@@ -164,13 +164,13 @@ Question page template – {{ serviceName }} – GOV.UK Prototype Kit
           </div>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <input class="govuk-checkboxes__input" id="function_diversitySource_recruitmentPlatform" name="function_diversitySource_recruitmentPlatform" type="checkbox" value="Recruitment Platform">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
                 HR Management System (such as SOP or iTrent)
               </label>
             </div>
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <input class="govuk-checkboxes__input" id="function_diversitySource_HRmanagementsystem" name="function_diversitySource_HRmanagementsystem" type="checkbox" value="HR Management System">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
                 Waste from mines or quarries
               </label>
